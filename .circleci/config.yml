@@ -118,6 +118,5 @@ workflows:
           context: binary-frontend-artifact-upload
           filters:
             branches:
-              ignore: /.*/
-            tags:
-              only: /^production.*/
+              only: /^master$/
+
