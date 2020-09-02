@@ -69,7 +69,7 @@ commands:
             - "1f:a7:93:4a:1c:f5:ac:6e:cd:c5:d2:88:67:6b:25:d6"
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages -d . --branch << parameters.target_branch >> --message '[skip ci]'
+          command: node ./node_modules/gh-pages/bin/gh-pages -d . --branch << parameters.target_branch >> --message '[skip ci]'
   k8s_deploy:
     description: "Deploy to k8s cluster"
     steps:
